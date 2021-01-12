@@ -22,8 +22,8 @@ cacheSolve<-function(x,...) { #set cacheSolve as an anonymous function
     message("getting cached data")
     return(inv)
   }
-  mat<-x$get() #retrieves get from list previously defined and assigns to mat
-  inv<-solve(mat,...) #solves inverse matrix
+  dat1<-x$get() #retrieves get from list previously defined and assigns to dat1
+  inv<-solve(dat1,...) #solves inverse matrix
   x$setinverse(inv) #reset 
   inv #returns solved inverted matrix
 }
